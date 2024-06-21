@@ -15,13 +15,11 @@
 
 	<!-- Flat Alert -->
 	<svelte:fragment slot="pageHeader">
-		<div class="m-3">
-			<FlatAlert />
-		</div>
+		<FlatAlert />
 	</svelte:fragment>
 
 	<!-- Page Content -->
-	<div class="h-full p-5 pt-1 mb-10">
+	<div class="h-full">
 		<slot />
 	</div>
 

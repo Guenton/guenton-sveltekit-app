@@ -32,8 +32,8 @@
 		<MaterialFab on:click={() => goto(aboutPage)}>
 			<IconInformation />
 		</MaterialFab>
-		<MaterialFab on:click={logout}>
+		<!-- <MaterialFab on:click={logout}>
 			<IconLogout />
-		</MaterialFab>
+		</MaterialFab> -->
 	</svelte:fragment>
 </AppBar>

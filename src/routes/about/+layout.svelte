@@ -1,8 +1,12 @@
 <script lang="ts">
+	import { AppShell } from '@skeletonlabs/skeleton';
+	import '../app.postcss';
+
 	import type { Unsubscriber } from 'svelte/store';
 	import { onDestroy, onMount } from 'svelte';
 	import { isDarkModeState } from '$lib/store';
-	import AppContainer from '$lib/components/containers/AppContainer.svelte';
+
+	import Analytics from '$lib/components/content/Analytics.svelte';
 
 	let unsubDarkMode: Unsubscriber;
 
@@ -16,9 +20,11 @@
 		});
 	});
 
-	onDestroy(() => unsubDarkMode());
+	onDestroy(() => unsubDarkMode && unsubDarkMode());
 </script>
 
-<AppContainer>
+<Analytics />
+
+<AppShell>
 	<slot />
-</AppContainer>
+</AppShell>
