@@ -14,7 +14,7 @@
 		>
 			<div class="m-10 md:m-32">
 				<div class="flex flex-col gap-5">
-					<h1 class="h1">Web & Mobile Focused</h1>
+					<h1 class="h1">Web & Mobile Pro</h1>
 					<h1 class="h1">UI/UX Specialist</h1>
 				</div>
 			</div>

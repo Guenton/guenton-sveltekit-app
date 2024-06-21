@@ -15,7 +15,9 @@
 
 	<!-- Flat Alert -->
 	<svelte:fragment slot="pageHeader">
-		<FlatAlert />
+		<div class="fixed top-20 left-1 right-1">
+			<FlatAlert />
+		</div>
 	</svelte:fragment>
 
 	<!-- Page Content -->

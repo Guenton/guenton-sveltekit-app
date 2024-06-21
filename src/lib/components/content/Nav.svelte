@@ -13,19 +13,19 @@
 	rounded=""
 	border=""
 >
-	<TabAnchor href={homePage} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
 		<span>Home</span>
 	</TabAnchor>
 
-	<TabAnchor href={homePage} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
 		<span>About Me</span>
 	</TabAnchor>
 
-	<TabAnchor href={homePage} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
 		<span>Portofolio</span>
 	</TabAnchor>
 
-	<TabAnchor href={homePage} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
 		<span>Contact</span>
 	</TabAnchor>
 </TabGroup>
