@@ -7,10 +7,10 @@ export const authSignupPage = '/auth/signup';
 export const authUserPage = '/auth/user';
 
 // HOME
-export const homePage = '/home';
-
-// VEHICLES
-export const vehiclesPage = '/vehicles';
+export const homePage = '/';
+export const aboutMePage = '/aboutMePage';
+export const portofolioPage = '/portofolioPage';
+export const contactPage = '/contactPage';
 
 // SERVICE
 export const servicePage = '/service';

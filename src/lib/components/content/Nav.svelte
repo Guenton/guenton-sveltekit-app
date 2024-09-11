@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
-	import { homePage, vehiclesPage, servicePage } from '$utils/pages';
+	import { aboutMePage, contactPage, homePage, portofolioPage } from '$utils/pages';
 </script>
 
 <TabGroup
@@ -17,15 +17,15 @@
 		<span>Home</span>
 	</TabAnchor>
 
-	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(aboutMePage)}>
 		<span>About Me</span>
 	</TabAnchor>
 
-	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(portofolioPage)}>
 		<span>Portofolio</span>
 	</TabAnchor>
 
-	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(homePage)}>
+	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(contactPage)}>
 		<span>Contact</span>
 	</TabAnchor>
 </TabGroup>

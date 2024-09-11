@@ -2,7 +2,6 @@
 	import FlatAlert from '$lib/components/content/FlatAlert.svelte';
 	import SubHeader from '../content/SubHeader.svelte';
 	import LogoGuenton from '../images/LogoGuenton.svelte';
-	import Banner from '../images/Banner.svelte';
 	import DarkSwitch from '../buttons/DarkSwitch.svelte';
 
 	export let label: string;
@@ -10,7 +9,7 @@
 
 <div class="flex flex-col justify-items-center w-full p-10">
 	<div class="flex flex-col items-center my-4">
-		<Banner />
+		<LogoGuenton />
 		<SubHeader {label} />
 	</div>
 
