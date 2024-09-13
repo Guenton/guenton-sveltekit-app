@@ -8,9 +8,9 @@ export const authUserPage = '/auth/user';
 
 // HOME
 export const homePage = '/';
-export const aboutMePage = '/aboutMePage';
-export const portofolioPage = '/portofolioPage';
-export const contactPage = '/contactPage';
+export const aboutMePage = '/about-me';
+export const portofolioPage = '/portofolio';
+export const contactPage = '/contact';
 
 // SERVICE
 export const servicePage = '/service';

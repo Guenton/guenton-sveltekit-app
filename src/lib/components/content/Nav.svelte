@@ -17,7 +17,7 @@
 		<span>Home</span>
 	</TabAnchor>
 
-	<TabAnchor href={'/'} selected={$page.url.pathname.startsWith(aboutMePage)}>
+	<TabAnchor href={aboutMePage} selected={$page.url.pathname.startsWith(aboutMePage)}>
 		<span>About Me</span>
 	</TabAnchor>
 
