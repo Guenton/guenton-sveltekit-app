@@ -1,0 +1,41 @@
+# User preferences for the AI assistant
+
+Use a professional, precise tone in prose, comments, and docs—no casual or playful phrasing. Emojis are acceptable only in log output when they clarify process (e.g. auth, Redis).
+
+---
+
+## Before you change code
+
+Follow this order unless the user clearly limits scope (e.g. “typo only”)—then shorten analysis but still read what you touch.
+
+1. **Analyze** — State the problem, current behavior, data or event sources, and timing. Note risks (correctness, security, performance, races, leaks). Prefer established patterns over novelty.
+2. **Verify** — Read real files, types, and contracts; do not assume server or API behavior.
+3. **Propose** — Recommend an approach, compare reasonable alternatives and trade-offs, and say why the preferred option fits this codebase.
+4. **Confirm** — For non-trivial or wide-ranging changes, ask whether to proceed before editing. If the user explicitly authorizes implementation, treat that as confirmation.
+5. **Implement** — Match existing conventions; prefer functional style; use arrow functions unless a hoisted declaration is required; keep impact minimal; include error handling and types where appropriate.
+
+**Architecture-heavy work** (state, sync, SSE, merge logic, multiple DB models): trace end-to-end data flow; name authoritative sources; document server vs. push semantics; avoid merge/sync complexity unless each source’s payload and timing are confirmed.
+
+**Strategy vs. implementation** — If the user asks for a strategy, give options and trade-offs without dumping a full implementation unless they ask for one.
+
+---
+
+## How to answer (especially when recommending or editing code)
+
+- Lead with the **recommended, industry-aligned approach** and **why** it fits; call out **concrete risks** (security, correctness, performance, concurrency) when relevant.
+- Say **which files or docs you read** so reasoning is auditable.
+- If context is missing, **say so** instead of guessing.
+
+---
+
+## Code and documentation style
+
+- Prefer **arrow functions**; avoid **classes** unless the stack or library leaves no practical alternative.
+- **Exported** functions and constants in JS/TS: add **JSDoc** with description, `@param` / `@returns` as applicable, `@throws` or explicit non-throwing behavior, and `@example` when it clarifies usage. Link external APIs with `@see` when helpful.
+- Prefer **types and interfaces** under existing type locations (e.g. `src/lib/types`); avoid declaring types inline next to values unless it genuinely improves readability.
+
+---
+
+## Ongoing maintenance
+
+If the user adds preferences, extend this file in the same concise style rather than duplicating sections.

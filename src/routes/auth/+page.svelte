@@ -1,0 +1,1 @@
+<p>Redirecting home.</p>

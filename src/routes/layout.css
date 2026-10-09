@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where([data-mode='dark'], [data-mode='dark'] *));
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton-svelte';
+@import '../lib/theme/guenton.css';
+
+@font-face {
+	font-family: 'Outfit Variable';
+	src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat Variable';
+	src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-display: swap;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-primary-500);
+	outline-offset: 2px;
+}
+
+.home-background {
+	background-image: url('/images/homeBackground.jpg');
+}
+
+.display-title {
+	font-family: var(--typo-heading--font-family);
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.page-copy a {
+	color: inherit;
+	text-underline-offset: 2px;
+}
+
+.page-copy a:hover {
+	color: var(--color-secondary-500);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
